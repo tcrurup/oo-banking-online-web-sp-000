@@ -12,7 +12,7 @@ class Transfer
   end
   
   def receiver
-    @receier
+    @receiver
   end
   
   def amount
