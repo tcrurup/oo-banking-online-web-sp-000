@@ -1,14 +1,14 @@
 class Transfer
   
   
-  def initialize(origin_account, designated_account, transfer_amount)
-    @origin = origin_account
+  def initialize(sending_account, designated_account, transfer_amount)
+    @sender = sending_account
     @designation = designated_account
     @amount = transfer_amount
   end
   
-  def origin
-    @origin
+  def sender
+    @sender
   end
   
   def destination
