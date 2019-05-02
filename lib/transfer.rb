@@ -1,9 +1,9 @@
 class Transfer
   
   
-  def initialize(sending_account, designated_account, transfer_amount)
+  def initialize(sending_account, receiver_account, transfer_amount)
     @sender = sending_account
-    @designation = designated_account
+    @receiver = receiver_account
     @amount = transfer_amount
   end
   
@@ -11,8 +11,8 @@ class Transfer
     @sender
   end
   
-  def destination
-    @destination
+  def receiver
+    @receier
   end
   
   def amount
