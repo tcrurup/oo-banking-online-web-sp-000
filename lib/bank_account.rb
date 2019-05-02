@@ -20,12 +20,8 @@ class BankAccount
     self.balance > 0 && self.status == "open"
   end
   
-  
   def name
     @name
   end
   
-  def status
-    @status
-  end
 end
