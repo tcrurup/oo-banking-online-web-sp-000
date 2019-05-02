@@ -6,6 +6,9 @@ class BankAccount
     @balance = 1000
   end
   
+  
+  
+  
   def name
     @name
   end
