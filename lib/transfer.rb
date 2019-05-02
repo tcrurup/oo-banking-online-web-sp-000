@@ -1,6 +1,7 @@
 class Transfer
   
   attr_accessor :status
+  attr_reader :sender, :receiver, :amount
   
   def initialize(sending_account, receiver_account, transfer_amount)
     @sender = sending_account
@@ -14,6 +15,9 @@ class Transfer
   end
   
   def execute_transaction
+    #Check to make sure that the transaction is pending first.  Next check that both
+    #accounts have funds then execute then either complete or reject the trasnfer changing
+    #the status to match
     if self.status == "pending"
       if self.sender.balance >= self.amount && self.receiver.balance >= self.amount
         self.sender.balance -= self.amount
@@ -34,17 +38,5 @@ class Transfer
       self.receiver.balance -= self.amount
       self.status = "reversed"
     end
-  end
-  
-  def sender
-    @sender
-  end
-  
-  def receiver
-    @receiver
-  end
-  
-  def amount
-    @amount
   end
 end
