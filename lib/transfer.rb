@@ -5,6 +5,7 @@ class Transfer
     @sender = sending_account
     @receiver = receiver_account
     @amount = transfer_amount
+    @status = "pending"
   end
   
   def sender
@@ -17,5 +18,9 @@ class Transfer
   
   def amount
     @amount
+  end
+  
+  def status
+    @status
   end
 end
