@@ -1,5 +1,6 @@
 class Transfer
   
+  attr_accessor :status
   
   def initialize(sending_account, receiver_account, transfer_amount)
     @sender = sending_account
@@ -28,9 +29,5 @@ class Transfer
   
   def amount
     @amount
-  end
-  
-  def status
-    @status
   end
 end
